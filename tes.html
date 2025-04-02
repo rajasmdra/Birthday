@@ -28,7 +28,34 @@
             <p class="caption" style="margin: 5px;">"Hey Babe! I make this website just for you.</p>
             <p class="caption" style="margin: 5px;">Hope you like it!"</p>
             <p style="font-size: 15px; margin: 25px 0 10px 0;">- With love, Roti Tawar</p>
-            <a class="button" href="#memories">Start</a>
+            <a class="button" href="#timer-box">Start</a>
+        </div>
+
+        <div id="timer-box">
+            <br><br><br><br><br>
+            <h1>We've been together for</h1>
+            <div class="timer">
+                <div class="time-box">
+                    <p id="time-days" ></p>
+                </div>
+                <div class="time-box">
+                    <p id="time-hours" ></p>
+                </div>
+                <div class="time-box">
+                    <p id="time-minutes" ></p>
+                </div>
+                <div class="time-box">
+                    <p id="time-seconds" ></p>
+                </div>
+            </div>
+            <div class="timer-text">
+                <div class="text"><p>days</p></div>
+                <div class="text"><p>hours</p></div>
+                <div class="text"><p>minutes</p></div>
+                <div class="text"><p>seconds</p></div>
+            </div>
+            <p class="caption">"Filled with love, laughter, and unforgetable memories."</p>
+            <a class="button" href="#memories">Next</a>
         </div>
 
         <div id="memories" >
@@ -291,9 +318,7 @@
                 </div>
             </div>
         </div>
-    </main>
 
-    <footer>
         <div id="surat">
             <img class="envelope" src="https://res.cloudinary.com/duzufag5n/image/upload/v1743318887/aesthetic-envelope-flowers-free-vector-removebg-preview_gpczgo.png" alt="Envelope">
             <button class="button" onclick="openSurat()">Open</button>
@@ -305,20 +330,32 @@
                 <p>Selamat! Kamu telah membuka surat ini. Semoga harimu menyenangkan! 😊</p>
             </div>
         </div>
-        
+    </main>
+
+    <footer>
+        <h1>Who is birthday today</h1>
+        <div class="card">
+            <div class="profile">
+                <div class="profile-photo"></div>
+                
+            </div>
+            <div class="about">
+                <br>
+                <p>Name: Debora Aprilia</p>
+                <p>Birthday : April 20, 2005</p>
+                <p>Age : 20 years old</p>
+                <br>
+                
+            </div>
+        </div>
+
+
         <div class="copyright">
-             <p>&copy; 2025 Rajasmdra. All Rights Reserved</p>
+            <p>&copy; 2025 Rajasmdra. All Rights Reserved</p>
         </div>
     </footer>
 
-    <script>
-        function openSurat() {
-            document.getElementById("modalSurat").style.display = "flex";
-        }
-        function closeSurat() {
-            document.getElementById("modalSurat").style.display = "none";
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
