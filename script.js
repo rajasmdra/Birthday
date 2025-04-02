@@ -44,3 +44,4 @@ function openSurat() {
 }
 function closeSurat() {
     document.getElementById("modalSurat").style.display = "none";
+}
