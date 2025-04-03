@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -7,6 +8,7 @@ body {
     background-color: aliceblue;
     text-align: center;
     font-family: sans-serif;
+    overflow-x: hidden;
 }    
 h1, p {
     margin: 5px;
@@ -77,43 +79,70 @@ h1, p {
 .button:hover {
     transform: scale(1.1);
 }
-
+#card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .card {
     display: flex;
     text-align: left;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 20px;
-    background-color: tomato;
+    margin: 20px;  
 }
-
 .profile {
-    width: 360px;
-    background: linear-gradient(to bottom, tomato 50%, aquamarine 50%);
+    background-color : pink;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 120px;
+    height: 240px;
+    border-radius: 20px 0 0 20px;
 }
 .profile-photo {
-    width: 150px;
-    height: 150px;
     background-color: white;
-    border-radius: 75px;
+    width: 90px;
+    height: 120px;
 }
 .about {
-    width: 360px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: aquamarine;
+    background-color: pink;
+    width: 240px;
+    height: 240px;
+    border-radius: 0 20px 20px 0;
+}
+.biodata {
+    font-size: 13.5px;
+    margin: 5px 5px -5px 5px;
 }
 
+.beautiful, .cute, .kind, .tall, .sexy {
+    width: 85%;
+    height: 6px;
+    margin: 8px 0 8px 5px;
+}
 
+.beautiful {
+    background: linear-gradient(to right, deeppink 100%, white 0%);
+}
+.cute {
+    background: linear-gradient(to right, deeppink 90%, white 10%);
+}
+.kind {
+    background: linear-gradient(to right, deeppink 80%, white 20%);
+}
+.tall {
+    background: linear-gradient(to left, white 98%, deeppink 2%);
+}
+.sexy {
+    background: linear-gradient(to right, deeppink 100%, white 0%); transform: scaleX(6); 
+    transform-origin: left;
+}
 
-
-#timer-box {
+#timer-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,6 +183,21 @@ h1, p {
     width: 100px;
     font-weight: bold;
 }
+
+#playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+iframe {
+    border-radius: 20px;
+    width: 360px;
+    height: 360px;
+    margin: 10px;
+}
+
 .caption {
     font-size: 16px;
     color: black;
@@ -225,7 +269,7 @@ h1 {
 .photobooth:hover .overlay {
     opacity: 0;
 }
-#surat {
+#letter-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -248,7 +292,7 @@ h1 {
     align-items: center;
 }
 .modal-content {
-    background: white;
+    background: beige;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
