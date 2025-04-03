@@ -11,17 +11,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    
-    <nav class="header">
+    <!-- NAVBAR -->
+    <nav>
         <div class="logo"><h1>Hello</h1></div>
-        <div class="menu">
-            <a href="#cover"><i class="fa-solid fa-house li-header"></i></a>
-            <a href="#memories"><i class="fa-solid fa-image li-header"></i></a>
-            <a href="#letter-container"><i class="fa-solid fa-envelope li-header"></i></a>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div id="menu">
+            <a href="#cover">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#card-container">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#timer-container">
+                <i class="fa-solid fa-clock"></i>
+                <span>Our Time</span>
+            </a>
+            <a href="#playlist">
+                <i class="fa-solid fa-music"></i>
+                <span>Playlist</span>
+            </a>
+            <a href="#memories">
+                <i class="fa-solid fa-image"></i>
+                <span>Memories</span>
+            </a>
+            <a href="#letter-container">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Letter</span>
+            </a>
         </div>
     </nav>
 
     <main>
+        <!-- HOME -->
         <div id="cover">
             <br><br>
             <h1 style="margin: 30px;">Welcome to this page, Strawberry jam!</h1>
@@ -31,13 +56,13 @@
             <a class="button" href="#card-container">Start</a>
         </div>
 
+        <!-- PROFILE -->
         <div id="card-container">
             <br><br><br><br><br>
             <h1>Who is birthday today?</h1>
             <div class="card">
                 <div class="profile">
-                    <div class="profile-photo"></div>
-                    
+                    <img src="https://res.cloudinary.com/duzufag5n/image/upload/v1743690048/WhatsApp_Image_2025-04-03_at_21.19.00_y1buit.jpg" alt="" class="profile-photo">
                 </div>
                 <div class="about">
                     <p class="biodata">Name</p>
@@ -50,7 +75,7 @@
             </div>
             <div class="card">
                 <div class="profile">
-                    <div class="profile-photo"></div>
+                    <img src="https://res.cloudinary.com/duzufag5n/image/upload/v1743690048/WhatsApp_Image_2025-04-03_at_21.19.00_y1buit.jpg" alt="" class="profile-photo">
                 </div>
                 <div class="about">
                     <div class="biodata">Beautiful</div>
@@ -66,7 +91,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- TIMER -->
         <div id="timer-container">
             <br><br><br><br><br>
             <h1>We've been together for</h1>
@@ -85,14 +111,15 @@
                 </div>
             </div>
             <div class="timer-text">
-                <div class="text"><p>days</p></div>
-                <div class="text"><p>hours</p></div>
-                <div class="text"><p>minutes</p></div>
-                <div class="text"><p>seconds</p></div>
+                <div><p>days</p></div>
+                <div><p>hours</p></div>
+                <div><p>minutes</p></div>
+                <div><p>seconds</p></div>
             </div>
             <p class="caption">"Filled with love, laughter, and unforgetable memories."</p>
         </div>
 
+        <!-- PLAYLIST -->
         <div id="playlist">
             <br><br><br>
             <h1 class="birthstone-bounce-medium">Our Playlist</h1>
@@ -100,6 +127,7 @@
             <iframe src="https://open.spotify.com/embed/playlist/1AQGNXnNrAK8hfwkuaIDwk?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
+        <!-- MEMORIES -->
         <div id="memories" >
             <br><br><br><br><br>
             <h1 class="birthstone-bounce-medium">Our Memories</h1>
@@ -361,6 +389,7 @@
             </div>
         </div>
 
+        <!-- LETTER -->
         <div id="letter-container">
             <img class="envelope" src="https://res.cloudinary.com/duzufag5n/image/upload/v1743318887/aesthetic-envelope-flowers-free-vector-removebg-preview_gpczgo.png" alt="Envelope">
             <button class="button" onclick="openSurat()">Open</button>
@@ -375,6 +404,7 @@
     </main>
 
     <footer>  
+        <!-- COPYRIGHT -->
         <div class="copyright">
             <p>&copy; 2025 Rajasmdra. All Rights Reserved</p>
         </div>

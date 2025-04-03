@@ -45,3 +45,10 @@ function openSurat() {
 function closeSurat() {
     document.getElementById("modalSurat").style.display = "none";
 }
+
+const hamburger = document.querySelector(".hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+}); 

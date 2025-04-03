@@ -20,36 +20,70 @@ h1, p {
     font-size: 55px;
     margin-bottom: 30px;
 }
-.header {
+.caption {
+    font-size: 16px;
+    color: black;
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+/* NAVBAR */
+
+nav {
     width: 100%;
     background-color: pink;
     height: 55px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: fixed;
     z-index: 1;
+    color: white;
 }
 .logo {
     font-size: 25px;
     font-weight: bold;
-    margin-left: 5%;
-    margin-right: auto;
-    color: white;
+    margin-left: 6%;
 }
-.menu {
+.hamburger {
+    display: none;
+    margin-right: 6%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 22.5px;
+}
+.hamburger:hover {
+    transform: scale(1.25);
+}
+#menu {
     margin-right: 6%;
     display: flex;
     gap: 22.5px;
 }
-.li-header {
+#menu i {
     transition: transform 0.3s;
-    color: white;
     font-size: 22.5px;
 }
-.li-header:hover {
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#menu span {
+    font-size: 15px;
+    margin-top: 8px;
+    display: none;
+    font-weight: bold;
+}
+#menu i:hover {
     transform: scale(1.25);
 }
+
+/* COVER */
+
 #cover {
     height: 100vh;
     display: flex;
@@ -79,6 +113,9 @@ h1, p {
 .button:hover {
     transform: scale(1.1);
 }
+
+/* CARD */
+
 #card-container {
     display: flex;
     justify-content: center;
@@ -103,6 +140,7 @@ h1, p {
     background-color: white;
     width: 90px;
     height: 120px;
+    border-radius: 8px;
 }
 .about {
     font-weight: bold;
@@ -142,6 +180,8 @@ h1, p {
     transform-origin: left;
 }
 
+/* TIMER */
+
 #timer-container {
     display: flex;
     justify-content: center;
@@ -177,12 +217,14 @@ h1, p {
     align-items: center;
     gap: 15px;
 }
-.text {
+.timer-text div{
     font-size: 17.5px;
     margin: 0 0 5px 0;
     width: 100px;
     font-weight: bold;
 }
+
+/* PLAYLIST */
 
 #playlist {
     display: flex;
@@ -198,12 +240,7 @@ iframe {
     margin: 10px;
 }
 
-.caption {
-    font-size: 16px;
-    color: black;
-    margin: 0 0 15px 0;
-    font-style: italic;
-}
+
 #album {
     display: flex;
     justify-content: center;
@@ -268,6 +305,9 @@ h1 {
 }
 .photobooth:hover .overlay {
     opacity: 0;
+
+/* LETTER */
+
 }
 #letter-container {
     display: flex;
@@ -311,6 +351,9 @@ h1 {
     color: black;
     margin: 40px 0 15px 0;
 }
+
+/* LOGIN */
+
 .login {
     background: linear-gradient(to bottom, pink, aliceblue);   
     display: flex;
@@ -373,16 +416,46 @@ input:hover {
     font-size: 14.5px;
 }
 
-@media (max-width: 480px) {
+/* MOBILE STYLES */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    #menu {
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        position: absolute;
+        background-color: pink;
+        width: 100%;
+        height: 150px;
+        gap:1px ;
+        transition: top 2s ease-in-out;
+        border-radius: 0 0 25px 25px;
+    }
+
+    #menu a {
+        width: 75px;;
+    }    
+    #menu i:hover {
+        transform: scale(1.5);
+    }
+    #menu span {
+        display: block;
+    }
+    #menu.show {
+        display: grid;
+        top: 55px;
+    }
+
     .time-box {
         height: 75px;
         width: 75px;
         font-size: 35px;
     }
-    
-    .text {
+    .timer-text div{
         font-size: 15px;
         width: 75px;
     }
-    
 }
