@@ -121,6 +121,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 90vh;
 }
 .card {
     display: flex;
@@ -162,7 +163,6 @@ nav {
     height: 6px;
     margin: 8px 0 8px 5px;
 }
-
 .beautiful {
     background: linear-gradient(to right, deeppink 100%, white 0%);
 }
@@ -178,6 +178,18 @@ nav {
 .sexy {
     background: linear-gradient(to right, deeppink 100%, white 0%); transform: scaleX(6); 
     transform-origin: left;
+}
+
+.front {
+    position: absolute;
+    margin-top: 47.5px;
+}
+.back {
+    position: relative;
+    opacity: 0;
+}
+.back.swipe {
+    opacity: 100%;
 }
 
 /* TIMER */
@@ -319,6 +331,7 @@ h1 {
     margin: 30px 0 0 0;
     height: 250px;
     width: 250px;
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
 }
 .modal {
     display: none;
@@ -391,6 +404,10 @@ input::placeholder {
     font-size: 18px;
     font-family: sans-serif;
 }
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px pink;
+}
 .submit {
     background-color: pink;
     border: 0;
@@ -408,7 +425,7 @@ input::placeholder {
 }
 input:hover {
     transform: scale(1.1);
-    border: pink 2px solid;
+    box-shadow: 0 0 10px pink;
 }
 .error {
     color: red;
@@ -434,11 +451,10 @@ input:hover {
         transition: top 2s ease-in-out;
         border-radius: 0 0 25px 25px;
     }
-
     #menu a {
-        width: 75px;;
+        width: 75px;
     }    
-    #menu i:hover {
+    #menu a:hover i {
         transform: scale(1.5);
     }
     #menu span {

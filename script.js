@@ -52,3 +52,10 @@ const menu = document.getElementById("menu");
 hamburger.addEventListener("click", () => {
     menu.classList.toggle("show");
 }); 
+
+const swipe = document.getElementById("swipe");
+const back = document.querySelector(".back");
+
+swipe.addEventListener("click", () => {
+    back.classList.toggle("swipe");
+});
