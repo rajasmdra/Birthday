@@ -30,58 +30,62 @@ h1, p {
 /* NAVBAR */
 
 nav {
-    width: 100%;
-    background-color: pink;
     height: 55px;
+    width: 95%;
+    background-color: pink;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: white;
     position: fixed;
-    z-index: 1;
-    color: white;
-}
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    margin-left: 6%;
-}
-.hamburger {
-    display: none;
-    margin-right: 6%;
-    cursor: pointer;
-    transition: transform 0.3s;
-    font-size: 22.5px;
-}
-.hamburger:hover {
-    transform: scale(1.25);
-}
-#menu {
-    margin-right: 6%;
-    display: flex;
-    gap: 22.5px;
-}
-#menu i {
-    transition: transform 0.3s;
-    font-size: 22.5px;
-}
-#menu a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#menu span {
-    font-size: 15px;
-    margin-top: 8px;
-    display: none;
-    font-weight: bold;
-}
-#menu i:hover {
-    transform: scale(1.25);
+    z-index: 100;
+    left: 2.5%;
+    top: 2%;
+    border-radius: 25px;
 }
 
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-left: 6%;
+}
+
+.hamburger {
+    font-size: 20px;
+    margin-right: 6%;
+    transition: transform 0.3s;
+    display: none;
+}
+
+.hamburger:hover {
+    transform: scale(1.2);
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 6%;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-list a:hover{ 
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.menu-list i {
+    display: none;
+}
 /* COVER */
 
 #cover {
@@ -97,7 +101,7 @@ nav {
     border: 0;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     width: 60%;
     max-width: 400px;
     height: 40px;
@@ -127,15 +131,15 @@ nav {
     display: flex;
     text-align: left;
     margin: 20px;  
+    border-radius: 20px;
+    background: linear-gradient(to bottom, pink, beige);
 }
 .profile {
-    background-color : pink;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 120px;
     height: 240px;
-    border-radius: 20px 0 0 20px;
 }
 .profile-photo {
     background-color: white;
@@ -148,10 +152,8 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: pink;
     width: 240px;
     height: 240px;
-    border-radius: 0 20px 20px 0;
 }
 .biodata {
     font-size: 13.5px;
@@ -159,25 +161,26 @@ nav {
 }
 
 .beautiful, .cute, .kind, .tall, .sexy {
-    width: 85%;
+    width: 90%;
     height: 6px;
     margin: 8px 0 8px 5px;
+    border-radius: 3px;
 }
 .beautiful {
-    background: linear-gradient(to right, deeppink 100%, white 0%);
+    background: linear-gradient(to right, darkseagreen 100%, white 0%);
 }
 .cute {
-    background: linear-gradient(to right, deeppink 90%, white 10%);
+    background: linear-gradient(to right, darkseagreen 90%, white 10%);
 }
 .kind {
-    background: linear-gradient(to right, deeppink 80%, white 20%);
+    background: linear-gradient(to right, darkseagreen 80%, white 20%);
 }
 .tall {
-    background: linear-gradient(to left, white 98%, deeppink 2%);
+    background: linear-gradient(to left, white 98%, darkseagreen 2%);
 }
 .sexy {
-    background: linear-gradient(to right, deeppink 100%, white 0%); transform: scaleX(6); 
-    transform-origin: left;
+    background: linear-gradient(to right, darkseagreen 100%, white 0%);
+    width: 100000px;
 }
 
 .front {
@@ -272,7 +275,7 @@ img {
 }
 .overlay {
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     width: 100%;
     height: 70%;
     border-radius: 15px;
@@ -436,35 +439,58 @@ input:hover {
 /* MOBILE STYLES */
 
 @media (max-width: 768px) {
+    nav {
+        top: 1%;
+    }
+
+    .menu-list {
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        justify-items: center;
+        gap: 0;
+        position: absolute;
+        height: 147.5px;
+        top: 27.5px;
+        background-color: pink;
+        border-radius: 0 0 25px 25px;
+        z-index: -1;
+        padding-top: 25px;
+
+    }
+    .menu-list.show {
+        display: grid;
+    }
+
+    .menu-list a {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        gap: 5px;
+    }
+    
+    .menu-list i {
+        display: block;
+        font-size: 20px;
+    }
+
     .hamburger {
         display: block;
     }
-    #menu {
-        display: none;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        position: absolute;
-        background-color: pink;
-        width: 100%;
-        height: 150px;
-        gap:1px ;
-        transition: top 2s ease-in-out;
-        border-radius: 0 0 25px 25px;
-    }
-    #menu a {
-        width: 75px;
-    }    
-    #menu a:hover i {
-        transform: scale(1.5);
-    }
-    #menu span {
-        display: block;
-    }
-    #menu.show {
-        display: grid;
-        top: 55px;
+
+    .menu-list a:hover { 
+        transform: scale(1);
     }
 
+    .menu-list a:hover i{ 
+        transform: scale(1.4);
+        transition: transform 0.3s;
+    }
+}
+
+@media (max-width: 480px) {
     .time-box {
         height: 75px;
         width: 75px;

@@ -47,7 +47,7 @@ function closeSurat() {
 }
 
 const hamburger = document.querySelector(".hamburger");
-const menu = document.getElementById("menu");
+const menu = document.querySelector(".menu-list");
 
 hamburger.addEventListener("click", () => {
     menu.classList.toggle("show");
