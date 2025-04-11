@@ -31,7 +31,7 @@ h1, p {
 
 nav {
     height: 55px;
-    width: 95%;
+    width: 100%;
     background-color: pink;
     display: flex;
     align-items: center;
@@ -39,9 +39,6 @@ nav {
     color: white;
     position: fixed;
     z-index: 100;
-    left: 2.5%;
-    top: 2%;
-    border-radius: 25px;
 }
 
 .logo {
@@ -89,11 +86,12 @@ nav {
 /* COVER */
 
 #cover {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 55px;
     background: linear-gradient(to bottom, pink, aliceblue);
 }
 .button {
@@ -151,19 +149,28 @@ nav {
     font-weight: bold;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 240px;
     height: 240px;
 }
+
 .biodata {
     font-size: 13.5px;
-    margin: 5px 5px -5px 5px;
+    margin: 5px 5px -5px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.front .about .biodata {
+    margin-left: 5px;
 }
 
 .beautiful, .cute, .kind, .tall, .sexy {
     width: 90%;
     height: 6px;
-    margin: 8px 0 8px 5px;
+    margin: 0 0 8px 5px;
     border-radius: 3px;
 }
 .beautiful {
@@ -239,6 +246,10 @@ nav {
     font-weight: bold;
 }
 
+#timer-container .caption{
+    margin: 0 20px 0 20px;
+}
+
 /* PLAYLIST */
 
 #playlist {
@@ -246,7 +257,8 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 95vh;
+    scroll-margin-top: 40px;
 }
 iframe {
     border-radius: 20px;
@@ -439,10 +451,6 @@ input:hover {
 /* MOBILE STYLES */
 
 @media (max-width: 768px) {
-    nav {
-        top: 1%;
-    }
-
     .menu-list {
         display: none;
         grid-template-columns: repeat(3, 1fr);
@@ -450,7 +458,7 @@ input:hover {
         justify-items: center;
         gap: 0;
         position: absolute;
-        height: 147.5px;
+        height: 120px;
         top: 27.5px;
         background-color: pink;
         border-radius: 0 0 25px 25px;
@@ -476,6 +484,10 @@ input:hover {
         font-size: 20px;
     }
 
+    .menu-list span {
+        font-size: 16px;
+    }
+
     .hamburger {
         display: block;
     }
@@ -487,6 +499,10 @@ input:hover {
     .menu-list a:hover i{ 
         transform: scale(1.4);
         transition: transform 0.3s;
+    }
+
+    #playlist {
+        scroll-margin-top: -20px;
     }
 }
 
