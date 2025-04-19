@@ -3,7 +3,7 @@ function login() {
     var errorMessage = document.getElementById("error-message");
     
     if (password === "27102024") {
-        window.location.href = "tes.html";
+        window.location.href = "main.html";
     } else {
         errorMessage.textContent = "Password anda salah, silahkan coba lagi.";
     }
@@ -53,9 +53,9 @@ hamburger.addEventListener("click", () => {
     menu.classList.toggle("show");
 }); 
 
-const swipe = document.getElementById("swipe");
+const swipe = document.getElementById("flip");
 const back = document.querySelector(".back");
 
 swipe.addEventListener("click", () => {
-    back.classList.toggle("swipe");
+    back.classList.toggle("flip");
 });
