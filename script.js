@@ -11,7 +11,8 @@ function login() {
 
 function timer() {
     let startTime = new Date(2024, 9, 27, 17, 0);
-    let timeElapsed = new Date() - startTime;
+    let endTime = new Date(2025, 7, 9 , 21, 49);
+    let timeElapsed = endTime - startTime;
 
     let days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
     let hours = Math.floor(timeElapsed / (1000 * 60 * 60) % 24);
