@@ -34,7 +34,7 @@ function timer() {
 
 const startTimer = () => {
     timer();
-    setInterval(1000);
+    setInterval(timer, 1000);
 };
 
 startTimer();
