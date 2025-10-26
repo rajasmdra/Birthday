@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #eabffd, white);
+}
+
+.login-bar {
+    background: whitesmoke;
+    height: 480px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 24px;
+}
+
+#username, #password, button, .other {
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    width: 250px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+#username:focus, #password:focus {
+    outline-color: #eabffd;
+}
+
+button {
+    border-radius: 8px;
+    border: none;
+    background-color: #eabffd;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.other {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15px;
+    padding: 0;
+}
+label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.option {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+i {
+    color: black;
+}

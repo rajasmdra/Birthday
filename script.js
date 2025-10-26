@@ -10,8 +10,9 @@ function login() {
 }
 
 function timer() {
-    let startTime = new Date(2024, 9, 27, 17, 0);
-    let timeElapsed = new Date() - startTime;
+    let startTime = new Date(2024, 10 - 1, 27, 0, 0);
+    let endTime = new Date();
+    let timeElapsed = endTime - startTime;
 
     let days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
     let hours = Math.floor(timeElapsed / (1000 * 60 * 60) % 24);
@@ -38,6 +39,32 @@ const startTimer = () => {
 };
 
 startTimer();
+
+// function timer() {
+// let startTime = new Date(2024, 10 - 1, 27, 0, 0);
+//     let endTime = new Date(2025, 8 - 1, 9, 0, 0);
+//     let timeElapsed = endTime - startTime;
+// 
+//     let days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+//     let hours = Math.floor(timeElapsed / (1000 * 60 * 60) % 24);
+//     let minutes = Math.floor(timeElapsed / (1000 * 60) % 60);
+//     let seconds = Math.floor(timeElapsed / 1000 % 60);
+// 
+//     if (minutes < 10) {
+//         minutes = "0" + minutes;
+//     }
+// 
+//     if (seconds < 10) {
+//         seconds = "0" + seconds;
+//     }
+// 
+//     document.getElementById("time-days").innerHTML = days;
+//     document.getElementById("time-hours").innerHTML = hours;
+//     document.getElementById("time-minutes").innerHTML = minutes;
+//     document.getElementById("time-seconds").innerHTML = seconds;
+// };
+// 
+// timer()
 
 function openSurat() {
     document.getElementById("modalSurat").style.display = "flex";
