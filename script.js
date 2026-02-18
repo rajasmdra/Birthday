@@ -33,12 +33,7 @@ function timer() {
     document.getElementById("time-seconds").innerHTML = seconds;
 };
 
-const startTimer = () => {
-    timer();
-    setInterval(timer, 1000);
-};
-
-startTimer();
+timer();
 
 function openSurat() {
     document.getElementById("modalSurat").style.display = "flex";
